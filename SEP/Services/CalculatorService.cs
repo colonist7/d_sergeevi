@@ -83,7 +83,7 @@ namespace SEP.Services
             value_result.value_b = b.ToString();
             value_result.operation = operation;
             value_result.result = result.ToString();
-            value_result.value_result = status;
+            value_result.result_code = status;
 
             return value_result;
         }

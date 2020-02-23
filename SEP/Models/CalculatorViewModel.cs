@@ -11,7 +11,7 @@ namespace SEP.Models
         public string value_b { get; set; }
         public string operation { get; set; }
         public string result { get; set; }
-        public string value_result { get; set; }
+        public string result_code { get; set; }
 
     }
 }
