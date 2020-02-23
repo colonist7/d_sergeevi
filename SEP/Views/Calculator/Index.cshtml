@@ -1,0 +1,42 @@
+﻿@model SEP.Models.CalculatorViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<h4>CalculatorViewModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Calculator"  asp-action="Operation">
+            <label>
+                Value A
+                <input type="text" name="value_a" class="form-control" />
+            </label>
+
+
+            <label>
+                Value B
+                <input type="text" name="value_b" class="form-control" />
+            </label>
+
+            <label>
+                Operation (Please type one of the following: "add", "sub", "mul", "div")
+                <input type="text" name="operation" class="form-control" />
+            </label>
+            <div class="form-group">
+                <input type="submit" class="btn btn-outline-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

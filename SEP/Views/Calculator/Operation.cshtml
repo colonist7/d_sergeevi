@@ -1,0 +1,38 @@
+﻿@model CalculatorViewModel;
+
+@{
+    ViewData["Title"] = "Operation";
+    var value = "";
+}
+
+<h1>Operation</h1>
+
+@if (Model.value_result.Equals("ok"))
+{
+    var sign = "";
+    switch(Model.operation)
+    {
+        case "add":
+            sign = "+";
+            break;
+        case "sub":
+            sign = "-";
+            break;
+        case "mul":
+            sign = "x";
+            break;
+        case "div":
+            sign = ":";
+            break;
+    }
+    value = Model.value_a + " " + sign + " " + Model.value_b + " = " + Model.result;
+}
+else
+{
+    value = Model.value_result;
+}
+
+
+<h1>
+    @value
+</h1>
